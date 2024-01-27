@@ -177,7 +177,7 @@ else
     echo "Skip cleaning of build directory: $BUILD_FOLDER"
 fi
 # Use ccache if available
-(which ccache >/dev/null) && CCACHE_CMAKE_ARGS="-DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache" || CCACHE_CMAKE_ARGS=""
+(which ccache >/dev/null) && CCACHE_CMAKE_ARGS="-DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DAUTO_DETECT_ISA=False" || CCACHE_CMAKE_ARGS="-DENABLE_EXPORT=ON -DENABLE_ZEROMQ=ON -DAUTO_DETECT_ISA=False"
 
 # Build process
 mkdir -p "$BUILD_FOLDER"
