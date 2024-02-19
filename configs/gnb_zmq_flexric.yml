@@ -54,4 +54,7 @@ e2:
   bind_addr: 10.53.2.3              # A local IP that the E2 agent binds to for traffic from the RIC. ONLY required if running the RIC on a separate machine.
   port: 36421                       # RIC port
                                                 
+metrics:
+  rlc_json_enable: 1                # Enable RLC metrics reporting
+  rlc_report_period: 1000           # Set reporting period to 1s
   
